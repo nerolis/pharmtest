@@ -1,5 +1,4 @@
 import { Pool } from 'pg';
-import { debug } from 'util';
 
 const pool = new Pool({
   database: 'test',

@@ -1,0 +1,12 @@
+
+{
+    "columns": {
+      "id"        : "Product name",
+      "name"      : "SKU name",
+      "price"     : "Price"
+    },
+
+    "delimiter" : ";",
+    "name"      : "shop-script",
+    "csv_url"   : "http://www.shop-script.com/wa-data/public/site/img/help/en/files/csv-example-utf8.csv"
+}

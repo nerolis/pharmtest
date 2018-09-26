@@ -1,9 +1,7 @@
 import fs           from 'fs';
 import util         from 'util';
 import axios        from 'axios';
-
-
-const csv    = require('csvtojson');
+import csv          from 'csvtojson';
 
 const path = './shops/';
 const read = util.promisify(fs.readFile);
@@ -30,7 +28,8 @@ export async function readCSV(shop) {
   const response = await downloadCSV(shop.csv_url);
 
   const options = {
-    delimiter: shop.delimiter
+    delimiter   : shop.delimiter,
+    ignoreEmpty : true,
   };
 
   return new Promise((resolve, reject) => {
@@ -38,9 +37,9 @@ export async function readCSV(shop) {
     csv(options)
       .fromStream(response.data)
       .subscribe(col => {
-        if (col) {
-          data.push(col);
-        }
+        const objectify = (obj, [k, v]) => ({ ...obj, [k]: col[v] });
+        const rows = Object.entries(shop.columns).reduce(objectify, {});
+        data.push(rows);
       })
       .on('done', () => resolve(data))
       .on('error', err => reject(err));
