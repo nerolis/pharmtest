@@ -10,8 +10,7 @@
 
 6. npm run start
 
-7. Залить вручную товары можно выполнив POST по http://localhost:5000/api/shop/niko-opt или  http://localhost:5000/api/shop/opt.10x10
-
+7. Залить вручную товары можно выполнив POST по http://localhost:5000/api/shop/niko-opt или  http://localhost:5000/api/shop/opt.10x10 с хедером: Authorization: 'superSecretToken'
  ```
   --connection
   database: 'test',
