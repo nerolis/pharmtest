@@ -3,7 +3,7 @@ import { RECEIVED_SHOPS, SHOPS_ERROR} from '../types';
 import axios from 'axios';
  
 const authorization = {
-  headers: { Authorization: 'superSectetToken' } 
+  headers: { Authorization: 'superSecretToken' } 
 };
 
 const receivedShops = shops => ({ 

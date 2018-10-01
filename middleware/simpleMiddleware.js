@@ -1,6 +1,6 @@
 export default function checkToken(req, res, next) {
 
-  const validAPIKEY = 'superSectetToken';
+  const validAPIKEY = 'superSecretToken';
 
 
   /**

@@ -13,7 +13,7 @@ const itemsError = err => ({
 });
 
 const authorization = {
-  headers: { Authorization: 'superSectetToken' } 
+  headers: { Authorization: 'superSecretToken' } 
 };
 
 export const fetchItem = (shopName, productId) => async (dispatch, getState) => {

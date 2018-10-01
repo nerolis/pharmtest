@@ -1,6 +1,6 @@
 process.env.NODE_ENV = 'test';
 
-const authorization = { Authorization: 'superSectetToken' };
+const authorization = { Authorization: 'superSecretToken' };
 
 import { sql }  from '../db/db';
 import chai     from 'chai';
