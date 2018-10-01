@@ -10,11 +10,7 @@ const pool = new Pool({
   connectionTimeoutMillis: 2000,
 });
 
-pool.on('connect', (conn) => {
-  conn.on('notice', (msg) => {
-    console.log(msg);
-  });
-});
+
 
 	
 export async function sql(text, params) {

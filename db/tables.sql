@@ -1,16 +1,20 @@
--- create table t_shop (
---     shop_id serial,
---     shop_name varchar(20),
-
---     primary(shop_id)
--- )
-
 create table t_item (
-    item_id serial,
-    id varchar(25),
-    name varchar(50),
-    price bigint,
-    shop_name varchar(25),
-
+    item_id  serial,
+    id       varchar,
+    name     varchar,
+    price    bigint,
+    shop_id  int,
+    
+    foreign key (shop_id) references t_shop (shop_id),
     primary key(item_id)
+);
+
+
+create table t_shop (
+    shop_id  serial,
+    name     varchar UNIQUE,
+    brief    varchar,
+    upd_date timestamp, 
+
+    primary key (shop_id)
 );

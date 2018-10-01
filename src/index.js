@@ -7,6 +7,7 @@ import thunk                            from 'redux-thunk'
 import history                          from './app/utils/history';
 import rootReducer                      from './app/rootReducer';
 import App                              from './app/app';
+import 'babel-polyfill';
 
 const store = createStore(
   rootReducer,

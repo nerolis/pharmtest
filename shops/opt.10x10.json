@@ -1,0 +1,12 @@
+
+{
+    "columns": {
+      "id"     : "sku",
+      "name"   : "name",
+      "price"  : "price"
+    },
+
+    "delimiter" : ";",
+    "name"      : "opt.10x10",
+    "csv_url"   : "http://opt.10x10.com.ua/media/catalog/product/opt10x10.csv"
+}
