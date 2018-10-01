@@ -4,7 +4,7 @@
 
 3. Пролить таблицы из ./db/tables.sql
 
-4. npm run test  unit-test api. в том числе, зальет товары по конфигу(niko-opt);
+4. npm run test  (unit-test api. в том числе, зальет товары по конфигу(niko-opt));
 
 5. npm run build
 
