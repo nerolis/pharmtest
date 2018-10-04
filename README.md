@@ -4,7 +4,7 @@
 
 3. Пролить таблицы из ./db/tables.sql
 
-4. npm run test  unit-test api. в том числе, зальет товары по конфигу(niko-opt);
+4. npm run test  (unit-test api. в том числе, зальет товары по конфигу(niko-opt));
 
 5. npm run build
 
@@ -23,4 +23,4 @@
 niko-opt(BZ-1507D, BRK-286F, SKL0005)
 opt.10x10(BZ-1625A, BZ-1625B, BZ-1640C)
 
-@todo пофиксить проблему с эндокингом csv из кириллицы.
+@todo пофиксить проблему с энкодингом csv из кириллицы.
