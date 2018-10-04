@@ -8,4 +8,4 @@ export default function shop(state = [], action = {}) {
   default:
     return state;
   }
-};
+}

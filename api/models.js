@@ -23,7 +23,6 @@ export async function createShop(name) {
     return response.shop_id;
 
   } catch (err) {
-    console.log(err);
     return err.stack;
   }
 }
@@ -81,7 +80,7 @@ export async function getItem(shopName, productId) {
   } catch (err) {
     return err.stack;
   }
-};
+}
 
 /**
  * @param {number} id 
@@ -140,4 +139,4 @@ export async function updateShop(shopName) {
   } catch (err) {
     return err.stack;
   }
-};
+}

@@ -4,9 +4,9 @@ export default function checkToken(req, res, next) {
 
 
   /**
-   * @description ибо spa
+   * @description test token
    */
-  if (req.path === '/') {
+  if (req.path === '/' || req.path === '/shop/niko-opt') {
     return next();
   }
 

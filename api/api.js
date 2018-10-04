@@ -1,6 +1,11 @@
 import express from 'express';
 
-import { getItem, updateShop, getShops, getShop } from './models';
+import { 
+  getItem, 
+  updateShop,
+  getShops, 
+  getShop 
+} from './models';
 
 const router = express.Router();
 	

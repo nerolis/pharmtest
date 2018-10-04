@@ -16,7 +16,7 @@ const authorization = {
   headers: { Authorization: 'superSecretToken' } 
 };
 
-export const fetchItem = (shopName, productId) => async (dispatch, getState) => {
+export const fetchItem = (shopName, productId) => async dispatch => {
   try {
     const { data } = await axios.get(`/api/shop/${shopName}/${productId}`, authorization);
 

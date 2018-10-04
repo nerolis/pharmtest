@@ -17,7 +17,7 @@ const shopsError = err => ({
 });
 
 
-export const fetchShops = () => async (dispatch, getState) => {
+export const fetchShops = () => async dispatch => {
   try {
     const { data } = await axios.get('/api/shoplist', authorization);
     return dispatch(receivedShops(data.shops));

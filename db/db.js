@@ -1,7 +1,7 @@
 import { Pool } from 'pg';
 
 const pool = new Pool({
-  database: 'pharmtest',
+  database: 'test',
   host: 'localhost',
   user: 'postgres',
   password: 'postgres',
@@ -11,18 +11,17 @@ const pool = new Pool({
 });
 
 
-
-	
 export async function sql(text, params) {
   try {
 
     const resp = await pool.query(text, params);
 
     return {
-      response: resp.rows[0]
+      response: resp.rows[0] 
     };
-  }
-  catch (err) {
+
+  } catch (err) {
+    console.error(err);
     return {
       error: err
     };

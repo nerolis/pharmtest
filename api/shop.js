@@ -27,15 +27,16 @@ export async function readShop(shopName) {
 
 /**
  * @param {{csv_url: string, delimiter: string, columns: {any} }} shop 
- * @todo присваивать название магазина как-то иначе.
+ * @todo присваивать id магазина как-то иначе.
  */
 export async function readCSV(shop) {
   const stream  = await downloadCSV(shop.csv_url);
   const shop_id = await createShop(shop.name);
+
   const options = {
     delimiter   : shop.delimiter,
     ignoreEmpty : true,
-    colParser: {"price": "number"}
+    colParser   : {'price': 'number'}
   };
 
   return new Promise((resolve, reject) => {
@@ -51,15 +52,13 @@ export async function readCSV(shop) {
       .on('done', () => resolve(data))
       .on('error', err => reject(err));
   });
-};
+}
 
 
 /**
- * 
  * @param {string} url 
- * @description скачивает CSV
  * @returns CSV stream
- */
+*/
 async function downloadCSV(url) {
   try {
 

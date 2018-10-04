@@ -5,7 +5,7 @@ import history         from '../utils/history';
 import ShopList        from '../components/ShopList';
 import { fetchShops }  from '../actions/shop';
 
-class Shop extends React.Component {
+class ShopContainer extends React.Component {
 
   componentWillMount = () => {
     if (!this.props.shops.length) {
@@ -23,8 +23,9 @@ class Shop extends React.Component {
   }
 }
 
-Shop.propTypes = {
-  shops: PropTypes.arrayOf(PropTypes.object).isRequired       
+ShopContainer.propTypes = {
+  shops: PropTypes.arrayOf(PropTypes.object).isRequired,
+  openShop: PropTypes.func.isRequired     
 }    
 
 function mapStateToProps(state) {
@@ -33,4 +34,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { fetchShops })(Shop)
+export default connect(mapStateToProps, { fetchShops })(ShopContainer)

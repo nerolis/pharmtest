@@ -3,6 +3,7 @@ import api        from './api/api';
 import bp         from 'body-parser';	
 import path       from 'path';
 import checkToken from './middleware/simpleMiddleware';
+
 const app = express();
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));

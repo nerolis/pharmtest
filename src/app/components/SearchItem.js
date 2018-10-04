@@ -1,6 +1,7 @@
-import _                              from 'lodash'
-import React, { Component }           from 'react'
-import { Search, Grid, Header, List } from 'semantic-ui-react'
+import _                              from 'lodash';
+import React, { Component }           from 'react';
+import PropTypes                      from 'prop-types';
+import { Search, Grid, Header, List } from 'semantic-ui-react';
 import { fetchItem }                  from '../actions/item';
 import { connect }                    from 'react-redux';
 
@@ -55,6 +56,10 @@ class SearchItem extends Component {
     )
   }
 }
+
+SearchItem.propTypes = {
+  fetchItem: PropTypes.func.isRequired     
+}    
 
 function mapStateToProps(state) {
   return {

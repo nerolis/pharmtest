@@ -1,12 +1,20 @@
 module.exports = {
+  // ...
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        enforce: "pre",
+        test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "eslint-loader",
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
         options: { babelrcRoots: ['.', '../'] },
-      }
-    ]
-  }
-};
+      },
+    ],
+  },
+  // ...
+}

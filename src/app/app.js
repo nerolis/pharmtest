@@ -9,8 +9,8 @@ class App extends React.Component {
 
   render() {
 
-    const { location } = this.props;
-
+    const { location }  = this.props;
+    
     const contentStyles = {marginTop: '50px'}
 
     return (
